@@ -1,9 +1,39 @@
 1. 安装python
+  1.1 从官网安装
+  1.2 Homebrew
 
-2. 经常出现的问题
+2. 卸载python
+
+3. 经常出现的问题
 
 当前电脑已安装多个版本python
 
 可能会出现pip3默认指向的安装路径与你当前所使用的python版本lib路径不一致
-$python3 # 检查当前python版本
-$python3
+KevindeMacBook-Pro:~ kevin$ python3 # 检查当前python版本
+
+KevindeMacBook-Pro:~ kevin$ which python  # 获得python路径
+/usr/local/bin/python
+
+KevindeMacBook-Pro:~ kevin$ python3 -m pip list # 查看python3的pip安装的包
+
+此时如果pip3 list所显示的包与python3 -m pip list现实的包不一致
+说明lib路径出错了 需要修正
+方法1: unistall 多余的python
+1. 如果是homebrew安装的 可以使用brew uninstall python@X.X
+  1.1 此时可能会出现一个问题就是 已安装好的依赖包 迫使直接uninstall失败
+      1.1.1 先删除依赖包 再卸载python
+            · pip/pip3 uninstall [package_name]
+            · brew uninstall [python_version]
+      1.1.2 懒得删除依赖 交给清理工具自动清理
+            · brew uninstall --ignore-dependencies [python_version]
+2. sudo rm -rf /Library/Frameworks/Python.framework/Versions/3.8
+3. sudo rm -rf "/Application/Python 3.8" # 删除directory，brew安装的版本一般不存在application
+4. brew cleanup python3
+5. 安装pip3
+  5.1 curl https://bootstrap.pypa.io/get-pip.py | python3
+  5.2 pip3 --version / pip3 -V
+      5.2.1 此时可能出现的问题有 默认的hash指向原来的路径 新安装的pip3 不存在环境变量中 导致pip3 install / list 等无效
+           · which pip
+           · pip
+           · type pip
+           · hash -r
