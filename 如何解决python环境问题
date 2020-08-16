@@ -1,0 +1,9 @@
+1. 安装python
+
+2. 经常出现的问题
+
+当前电脑已安装多个版本python
+
+可能会出现pip3默认指向的安装路径与你当前所使用的python版本lib路径不一致
+$python3 # 检查当前python版本
+$python3
