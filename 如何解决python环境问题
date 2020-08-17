@@ -37,3 +37,10 @@ KevindeMacBook-Pro:~ kevin$ python3 -m pip list # 查看python3的pip安装的�
            · pip
            · type pip
            · hash -r
+
+
+安装jupyter notebook
+
+注：
+没有逼不得已的情况下 千万不要用brew安装！！！
+brew 安装的jupyter/usr/local/Cellar/jupyterlab/2.1.4...
