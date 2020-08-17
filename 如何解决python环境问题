@@ -39,8 +39,33 @@ KevindeMacBook-Pro:~ kevin$ python3 -m pip list # 查看python3的pip安装的�
            · hash -r
 
 
-安装jupyter notebook
+4. 安装jupyter notebook
+pip3安装 -》 pip3 install jupyter
+启动jupyter -》python -m IPython notebook
+如若配置好环境变量 -》 jupyter notebook
 
 注：
 没有逼不得已的情况下 千万不要用brew安装！！！
-brew 安装的jupyter/usr/local/Cellar/jupyterlab/2.1.4...
+brew 安装的jupyter路径位于 /usr/local/Cellar/jupyterlab/2.1.4...
+记得先brew uninstall jupyter
+
+5. anacoda 安装
+参考：
+  1. https://blog.csdn.net/lq_547762983/article/details/81003528
+  2. https://www.jianshu.com/p/56fe5e6cdbfa
+
+6. pip autoremove 介绍
+安装 -》pip3 install pip-autoremove
+运行 -》pip-autoremove [packagename] -y
+参考：
+  1. https://www.jianshu.com/p/cf7fbb8a14a5
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
