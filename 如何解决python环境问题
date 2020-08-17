@@ -60,7 +60,10 @@ brew 安装的jupyter路径位于 /usr/local/Cellar/jupyterlab/2.1.4...
 参考：
   1. https://www.jianshu.com/p/cf7fbb8a14a5
   
-  
+ 
+ 7. jupyter 修改kernal
+ 参考：
+  1. https://blog.csdn.net/FontThrone/article/details/84616937
   
   
   
